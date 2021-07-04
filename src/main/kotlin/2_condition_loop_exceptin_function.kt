@@ -48,6 +48,8 @@ fun main() {
 //    forLoop()
 //    nothingType()
 
+//    customException()
+
 }
 
 fun square(number: Int): Int {
@@ -158,7 +160,6 @@ fun whenWithoutArg() {
         else -> "Odd Number"
     }
     print(demo)
-
 }
 
 fun forLoop() {
@@ -209,3 +210,11 @@ class Demo(demo: String) {
     val value = "somename"
     var name: String? = null
 }
+
+fun customException() {
+    val someNumber = 1
+    if (someNumber == 1)
+        throw MyException()
+}
+
+class MyException : Exception("This is my custom exception")
